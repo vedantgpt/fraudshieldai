@@ -1,0 +1,12 @@
+**/__pycache__/
+venv/
+app_source/
+app_source
+uploads/
+reports/
+reports
+vector_db/
+*.db
+.env
+.vscode/
+
