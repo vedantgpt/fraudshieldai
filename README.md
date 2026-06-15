@@ -159,7 +159,7 @@ Generated graphs are saved as `.mmd` files and exposed via the API at `/api/repo
 
 ## What We Built for the Hackathon
 
-The MVP delivers every item in the PRD Hackathon Must-Have list:
+The MVP delivers every item in the hackathon must-have list:
 
 | Hackathon Requirement | Status | How it works |
 |-----------------------|--------|--------------|
@@ -176,14 +176,14 @@ The MVP delivers every item in the PRD Hackathon Must-Have list:
 
 ## Implementation Status vs. Future Roadmap
 
-The table below maps the PRD modules to the current codebase. Items marked **Implemented** are working in the hackathon MVP. Items marked **Partial** or **Future Plan** are documented in the PRD but not yet built or only partially built.
+The table below maps each module in the project scope to the current codebase. Items marked **Implemented** are working in the hackathon MVP. Items marked **Partial** or **Future Plan** are planned but not yet built or only partially built.
 
-| PRD Module | Status | Notes |
+| Module | Status | Notes |
 |------------|--------|-------|
 | **M1: APK Ingestion Engine** | ✅ Implemented | Validates APK, computes SHA256, extracts metadata, certificate, signature, package, version, SDK, components. |
 | **M2: Reverse Engineering Engine** | ✅ Implemented | Bundled JADX decompilation with androguard fallback for AndroidManifest.xml. |
 | **M3: Static Analysis Engine** | ✅ Implemented | Fraud-focused rule engine detects dangerous permissions, suspicious APIs, runtime exec, dynamic loading, WebView abuse, root/emulator detection, accessibility abuse, hardcoded URLs/IPs, secrets, banking impersonation, obfuscation. |
-| **M4: AI Reverse Engineering** | ✅ Implemented | Gemini 1.5 Flash explains functionality, threat, intent, and banking impact with structured parsing and fallback. PRD target was Gemini 2.5 Pro; upgrade is a future plan. |
+| **M4: AI Reverse Engineering** | ✅ Implemented | Gemini 1.5 Flash explains functionality, threat, intent, and banking impact with structured parsing and fallback. Target was Gemini 2.5 Pro; upgrade is a future plan. |
 | **M5: Dynamic Analysis Sandbox** | ✅ Implemented (with fallback) | Supports MobSF API, ADB+Frida, ADB-only logcat, and a simulated behavioral sandbox fallback so the pipeline always completes. |
 | **M6: Malware Classification Engine** | ✅ Implemented (rule-based) | Heuristic classifier produces Banking Trojan / Spyware / RAT / Dropper / Adware / Ransomware / Credential Stealer / Hybrid / Benign. ML model (XGBoost) is a future plan. |
 | **M7: Threat Intelligence Engine** | ✅ Implemented | Regex-based IOC extraction + optional VirusTotal enrichment for file hash, URLs, domains, and IPs. |
@@ -197,15 +197,15 @@ The table below maps the PRD modules to the current codebase. Items marked **Imp
 | **Vector Database** | ✅ Implemented | ChromaDB stores investigation chunks for retrieval. |
 | **FastAPI Backend** | ✅ Implemented | REST API for upload, investigate, reports, dynamic analysis, and chat. |
 | **Streamlit Frontend** | ✅ Implemented | Web UI for upload, investigation report, and Security Copilot. |
-| **Gemini 2.5 Pro** | 🔄 Future Plan | PRD specifies Gemini 2.5 Pro; MVP uses Gemini 1.5 Flash for speed and availability. |
-| **ReportLab PDF Generation** | 🔄 Future Plan | PRD specifies ReportLab; current PDF generation uses xhtml2pdf. |
-| **APKTool Integration** | 🔄 Future Plan | PRD mentions APKTool; current engine uses JADX + androguard. |
-| **Celery / Background Workers** | 🔄 Future Plan | PRD mentions Celery workers; current orchestrator is synchronous. |
+| **Gemini 2.5 Pro** | 🔄 Future Plan | Target was Gemini 2.5 Pro; MVP uses Gemini 1.5 Flash for speed and availability. |
+| **ReportLab PDF Generation** | 🔄 Future Plan | Originally specified ReportLab; current PDF generation uses xhtml2pdf. |
+| **APKTool Integration** | 🔄 Future Plan | Originally specified APKTool; current engine uses JADX + androguard. |
+| **Celery / Background Workers** | 🔄 Future Plan | Originally specified Celery workers; current orchestrator is synchronous. |
 | **Docker / Docker Compose** | 🔄 Partial / Future Plan | A basic `Dockerfile` exists but is configured for the legacy CLI, not the full FastAPI + Streamlit stack. Production containerization is a future plan. |
-| **YARA Rules Integration** | 🔄 Future Plan | PRD mentions YARA rules; current engine uses regex and existing APKDeepLens scanners. |
-| **Behavior Correlation Engine** | 🔄 Future Plan | PRD lists a dedicated correlation engine between static and dynamic behavior; currently correlated inside the orchestrator. |
-| **ML-Based Malware Classification** | 🔄 Future Plan | PRD proposed XGBoost / Gradient Boosting; current implementation is heuristic/rule-based. |
-| **Containerized Dynamic Sandbox** | 🔄 Future Plan | PRD mentions containerized Android sandbox; current implementation uses external MobSF/ADB/Frida. |
+| **YARA Rules Integration** | 🔄 Future Plan | Originally specified YARA rules; current engine uses regex and existing APKDeepLens scanners. |
+| **Behavior Correlation Engine** | 🔄 Future Plan | Originally proposed as a dedicated correlation engine between static and dynamic behavior; currently correlated inside the orchestrator. |
+| **ML-Based Malware Classification** | 🔄 Future Plan | Originally proposed XGBoost / Gradient Boosting; current implementation is heuristic/rule-based. |
+| **Containerized Dynamic Sandbox** | 🔄 Future Plan | Originally specified containerized Android sandbox; current implementation uses external MobSF/ADB/Frida. |
 | **Multi-APK Batch Analysis** | 🔄 Future Plan | Analyze and compare multiple APKs simultaneously. |
 | **Zero-Day Detection** | 🔄 Future Plan | Anomaly-based detection for unknown malware families. |
 | **Federated Threat Intelligence** | 🔄 Future Plan | Share IOCs across organizations without central data sharing. |
@@ -328,7 +328,6 @@ python APKDeepLens.py -apk testing_apps/smartplug.apk -report json
 
 ## Key Files Added / Transformed
 
-- `FraudShield_AI_PRD (1).md` / `prd.md` — Product Requirements Document
 - `config.py` — Central configuration
 - `api/main.py` — FastAPI backend
 - `frontend/app.py` — Streamlit frontend
@@ -411,9 +410,3 @@ The API supports optional `FRAUDSHIELD_API_KEY` authentication, upload size limi
 ## License
 
 See [LICENSE](LICENSE).
-
----
-
-## Product Requirements
-
-See [FraudShield_AI_PRD (1).md](FraudShield_AI_PRD%20(1).md) for the full Product Requirements Document.
