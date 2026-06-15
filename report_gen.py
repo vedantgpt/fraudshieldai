@@ -13,9 +13,10 @@ logging.basicConfig(level=logging.DEBUG, format="%(message)s")
 """
     Title:      APKDeepLens
     Desc:       Android security insights in full spectrum.
-    Author:     Deepanshu Gajbhiye
+    Author:     Shubh Varshney
+    Email:      shubhvars2006@gmail.com
+    GitHub:     https://github.com/brainrottedCoder
     Version:    1.0.0
-    GitHub URL: https://github.com/d78ui98/APKDeepLens
 """
 
 

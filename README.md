@@ -407,6 +407,14 @@ The API supports optional `FRAUDSHIELD_API_KEY` authentication, upload size limi
 
 ---
 
+## Author & Maintainer
+
+- **Name:** Shubh Varshney
+- **Email:** shubhvars2006@gmail.com
+- **GitHub:** [brainrottedCoder](https://github.com/brainrottedCoder)
+
+---
+
 ## License
 
 See [LICENSE](LICENSE).

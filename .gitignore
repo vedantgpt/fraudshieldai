@@ -10,3 +10,7 @@ vector_db/
 .env
 .vscode/
 
+# Project Requirement Documents (kept locally; not pushed to remote)
+FraudShield_AI_PRD (1).md
+FraudShield AI PRD (1).pdf
+

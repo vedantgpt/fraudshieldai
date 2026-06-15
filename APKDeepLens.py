@@ -13,9 +13,10 @@ from report_gen import ReportGen, util
 """
     Title:      APKDeepLens
     Desc:       Android security insights in full spectrum.
-    Author:     Deepanshu Gajbhiye
+    Author:     Shubh Varshney
+    Email:      shubhvars2006@gmail.com
+    GitHub:     https://github.com/brainrottedCoder
     Version:    1.0.0
-    GitHub URL: https://github.com/d78ui98/APKDeepLens
 """
 
 logging.basicConfig(level=logging.ERROR, format="%(message)s")
@@ -118,7 +119,7 @@ class util(util):
 {util.OKGREEN}██  ██ ██     ██  ██`\\__,_)`\\___)`\\___)| ,__/'(____/`\\___)(_) (_)(____/     {util.ENDC}
 {util.OKGREEN}                                       | |                                  {util.ENDC}
 {util.OKGREEN}                                       (_)                                  {util.ENDC}
-{util.OKCYAN}                                              - Made By Deepanshu{util.ENDC}
+{util.OKCYAN}                                              - Made By Shubh Varshney{util.ENDC}
         """
         print(logo)
 
@@ -138,7 +139,7 @@ def parse_args():
         ),
         epilog=(
             "For more information, visit our GitHub repository"
-            " - https://github.com/d78ui98/APKDeepLens"
+            " - https://github.com/brainrottedCoder"
         ),
         formatter_class=argparse.RawTextHelpFormatter,
     )
